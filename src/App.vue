@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Header></Header>
-    <router-view></router-view>
+    <div class="main">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -13,7 +15,11 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
+.main{
+  width: 1200px;
+  margin:0 auto;
+}
 body{
   background: #e6e6e6;
 }
@@ -25,9 +31,10 @@ body{
   color: #2c3e50;
 }
 
-body,li,h1,h2,h3,h4,h5,a,p,div{
+body,li,h1,h2,h3,h4,h5,a,p,div,img{
   margin: 0;
   padding: 0;
   list-style: none;
+  box-sizing: border-box;
 }
 </style>
