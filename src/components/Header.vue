@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <el-menu theme="dark" :default-active="activeIndex" class="header-wrap" mode="horizontal" @select="handleSelect">
+    <el-menu theme="" :default-active="activeIndex" class="header-wrap" mode="horizontal" @select="handleSelect">
       <h2 class="logo">
         <img src="../assets/logo.png" alt="" >
         Vue中文社区视频课程
@@ -32,8 +32,11 @@
 
 <style media="screen">
   .header{
-    background: #324157;
-    color: #fff;
+    background: #fff;
+    /*color: #fff;*/
+  }
+  .el-menu{
+    background: transparent !important;
   }
   .header-wrap{
     width: 1200px;

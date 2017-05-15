@@ -1,8 +1,8 @@
 <template>
   <div class="video-list">
     <el-row :gutter="15">
-      <el-col :span="6" v-for="i in [1,2,3,4,5,6,9,91]">
-        <div class="course-description">
+      <el-col :span="6" v-for="i in [1,2,3,4,5,6,9,91]" >
+        <div class="course-description" @click="toDetail">
           <div class="image">
             <img src="https://a1.jikexueyuan.com/home/201611/03/fae6/581ae23c05942.jpg" alt="">
           </div>
@@ -31,6 +31,11 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App',
       currentDate: 'Welcome'
+    }
+  },
+  methods: {
+    toDetail (){
+      this.$router.push({ name: 'Detail', params: { userId: 123 }})
     }
   }
 }
@@ -69,6 +74,7 @@ export default {
     height: 210px;
     background: #fff;
     margin-bottom: 15px;
+    cursor: pointer;
     .image{
       height: 152px;
       overflow: hidden;
